@@ -4,11 +4,32 @@ use \Psr\Http\Message\ResponseInterface as Response;
 
 require '../vendor/autoload.php';
 
-$app = new \Slim\App;
-$app->get('/hello/{name}', function (Request $request, Response $response) {
-    $name = $request->getAttribute('name');
-    $response->getBody()->write("Hello, $name");
+$config['displayErrorDetails'] = true;
+$config['addContentLengthHeader'] = false;
 
-    return $response;
-});
+$app = new \Slim\App(["settings" => $config]);
+
+// Get container
+$container = $app->getContainer();
+
+// Register component on container
+$container['view'] = function ($container) {
+    $view = new \Slim\Views\Twig('templates', [
+      'cache' => false
+  ]);
+    
+    // Instantiate and add Slim specific extension
+    $basePath = rtrim(str_ireplace('index.php', '', $container['request']->getUri()->getBasePath()), '/');
+    $view->addExtension(new Slim\Views\TwigExtension($container['router'], $basePath));
+
+    return $view;
+};
+
+$app->get('/', function ($request, $response, $args) {
+    return $this->view->render($response, 'home.twig', [
+        'name' => $args['name']
+    ]);
+})->setName('home');
+
+// Run app
 $app->run();

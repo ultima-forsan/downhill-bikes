@@ -1,0 +1,33 @@
+{% set date = date('Y') %}
+
+<!DOCTYPE HTML>
+
+<html>
+	<head>
+	{% block head %}
+		<title>Downhill Bikes</title>
+		<meta name="description" content="Check the best downhill bikes around!">
+	    <meta charset="utf-8">
+	    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" /> 
+
+	    <link href='http://fonts.googleapis.com/css?family=Montserrat:400,700|Oxygen:400,700,300' rel='stylesheet' type='text/css'>
+	    <link rel="stylesheet" href="../../../../css/normalize.css">
+	    <link rel="stylesheet" href="../../../../css/style.css">
+	</head>
+	{% endblock head %}
+	<body>
+		<div class="wrap">
+	    	<header class="group">
+	        	<h1>Downhill Bikes</h1>
+	    	</header>
+{% block content %}
+
+{% endblock content %}	
+		</div>	
+			<footer>
+			{% block footer %}
+				<p id="copyright">&copy downhill-bikes.com - {{ "now"|date("Y") }}</p>
+			{% endblock footer %}	     		
+			</footer>	
+	</body>
+</html>
