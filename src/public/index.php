@@ -14,7 +14,7 @@ $container = $app->getContainer();
 
 // Register component on container
 $container['view'] = function ($container) {
-    $view = new \Slim\Views\Twig('templates', [
+    $view = new \Slim\Views\Twig('../templates', [
       'cache' => false
   ]);
     
@@ -26,6 +26,7 @@ $container['view'] = function ($container) {
 };
 
 $app->get('/', function ($request, $response, $args) {
+    
     return $this->view->render($response, 'home.twig', [
         'name' => $args['name']
     ]);

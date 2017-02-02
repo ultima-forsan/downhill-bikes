@@ -10,23 +10,28 @@
 	    <meta charset="utf-8">
 	    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" /> 
 
-	    <link href='http://fonts.googleapis.com/css?family=Montserrat:400,700|Oxygen:400,700,300' rel='stylesheet' type='text/css'>
-	    <link rel="stylesheet" href="../../../../css/normalize.css">
-	    <link rel="stylesheet" href="../../../../css/style.css">
+	    <link href="https://fonts.googleapis.com/css?family=Patua+One" rel="stylesheet">
+	    <link rel="stylesheet" href="/css/normalize.css">
+	    <link href="/css/style.css" rel=stylesheet />
 	</head>
 	{% endblock head %}
 	<body>
 		<div class="wrap">
-	    	<header class="group">
-	        	<h1>Downhill Bikes</h1>
+	    	<header class="navigation group">
+	        	<h1 class="title">Downhill Bikes</h1>
+	        	<ul class="navbar">
+	        		<li>Bikes</li>
+	        		<li>About</li>
+	        		<li>Contact</li>
+	        	</ul>
 	    	</header>
 {% block content %}
 
 {% endblock content %}	
 		</div>	
-			<footer>
+			<footer class="site-footer">
 			{% block footer %}
-				<p id="copyright">&copy downhill-bikes.com - {{ "now"|date("Y") }}</p>
+				<p class="copyright">&copy downhill-bikes.com - {{ "now"|date("Y") }}</p>
 			{% endblock footer %}	     		
 			</footer>	
 	</body>
