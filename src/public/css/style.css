@@ -31,15 +31,23 @@ html, body {
 	font-family: 'Patua One', sans-serif;
 	padding: 0;
 	margin: 0;
-	display: inline-block;
-	vertical-align: middle;
+	display: inline;
+  float: left;
+}
 
+ul {
+  vertical-align:middle;
+  margin-left: auto;
 }
 
 li {
     display: inline;
     list-style: none;
-    float: right;
-    display:inline-block;
-    vertical-align:middle;
+    margin: 0 20px 0 20px;
+}
+
+.navigation {
+  padding: 10px 0 10px 0;
+  display: flex;
+  align-items: center;
 }
