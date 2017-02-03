@@ -1,7 +1,6 @@
-{% set date = date('Y') %}
+{% set date = date('Y') %}  <!-- PHP Date for copyright -->
 
 <!DOCTYPE HTML>
-
 <html>
 	<head>
 	{% block head %}
@@ -28,7 +27,6 @@
 {% block content %}
 
 {% endblock content %}	
-			
 			<footer class="site-footer">
 			{% block footer %}
 				<p class="copyright">&copy downhill-bikes.com - {{ "now"|date("Y") }}</p>

@@ -1,5 +1,4 @@
 /* GENERAL */
-
 * {
   margin: 0;
 }
@@ -42,8 +41,7 @@ li {
 }
 
 /* SECTION */
-
-section {
+.main {
   flex: 1;
   background: linear-gradient(
       rgba(0, 0, 0, 0.5), 
@@ -59,10 +57,10 @@ section {
   color: white;
   font-family: 'Lato', sans-serif;
   letter-spacing: 5px;
+  border-bottom: solid thin;
 }
 
 /* FOOTER */
-
 .site-footer {
   display: flex;
   align-items: center;
@@ -72,4 +70,5 @@ section {
 
 .copyright {
   display: inline-block;
+  font-size: 0.75em;
 }

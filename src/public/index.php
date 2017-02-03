@@ -27,10 +27,8 @@ $container['view'] = function ($container) {
 
 $app->get('/', function ($request, $response, $args) {
     
-    return $this->view->render($response, 'home.twig', [
-        'name' => $args['name']
-    ]);
-})->setName('home');
+    return $this->view->render($response, 'home.twig');
+});
 
 // Run app
 $app->run();
