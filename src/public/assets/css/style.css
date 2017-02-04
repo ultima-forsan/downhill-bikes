@@ -1,0 +1,74 @@
+/* GENERAL */
+* {
+  margin: 0;
+}
+
+html, body {
+  height: 100%;
+}
+
+.wrap {
+display: flex;
+min-height: 100%;
+flex-direction: column;
+}
+
+/* HEADER */
+header {
+  padding: 10px 0 10px 0;
+  display: flex;
+  align-items: center;
+}
+
+.title {
+	font-family: 'Patua One', sans-serif;
+	padding: 0;
+	margin: 0 0 0 20px;
+	display: inline;
+  float: left;
+}
+
+.navbar {
+  vertical-align:middle;
+  margin-left: auto;
+  margin-right: 10px;
+}
+
+li {
+    display: inline;
+    list-style: none;
+    margin: 0 20px 0 20px;
+}
+
+/* SECTION */
+.main {
+  flex: 1;
+  background: linear-gradient(
+      rgba(0, 0, 0, 0.5), 
+      rgba(0, 0, 0, 0.5)
+    ), url(../img/background.jpg) no-repeat center center fixed;
+  background-size: cover;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.hometext {
+  color: white;
+  font-family: 'Lato', sans-serif;
+  letter-spacing: 5px;
+  border-bottom: solid thin;
+}
+
+/* FOOTER */
+.site-footer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 10px 0 10px 0;
+}
+
+.copyright {
+  display: inline-block;
+  font-size: 0.75em;
+}

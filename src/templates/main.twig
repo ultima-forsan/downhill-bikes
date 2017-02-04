@@ -1,7 +1,6 @@
-{% set date = date('Y') %}
+{% set date = date('Y') %}  <!-- PHP Date for copyright -->
 
 <!DOCTYPE HTML>
-
 <html>
 	<head>
 	{% block head %}
@@ -10,14 +9,14 @@
 	    <meta charset="utf-8">
 	    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" /> 
 
-	    <link href="https://fonts.googleapis.com/css?family=Patua+One" rel="stylesheet">
-	    <link rel="stylesheet" href="/css/normalize.css">
-	    <link href="/css/style.css" rel=stylesheet />
+	    <link href="https://fonts.googleapis.com/css?family=Patua+One|Lato" rel="stylesheet">
+	    <link rel="stylesheet" href="/assets/css/normalize.css" />
+	    <link rel="stylesheet" href="/assets/css/style.css" />
 	</head>
 	{% endblock head %}
 	<body>
 		<div class="wrap">
-	    	<header class="navigation group">
+	    	<header class="group">
 	        	<h1 class="title">Downhill Bikes</h1>
 	        	<ul class="navbar">
 	        		<li>Bikes</li>
@@ -28,11 +27,11 @@
 {% block content %}
 
 {% endblock content %}	
-		</div>	
 			<footer class="site-footer">
 			{% block footer %}
 				<p class="copyright">&copy downhill-bikes.com - {{ "now"|date("Y") }}</p>
 			{% endblock footer %}	     		
-			</footer>	
+			</footer>
+		</div>
 	</body>
 </html>
