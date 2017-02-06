@@ -7,6 +7,10 @@ html, body {
   height: 100%;
 }
 
+a {
+  text-decoration: none;
+}
+
 .wrap {
 display: flex;
 min-height: 100%;
@@ -28,16 +32,47 @@ header {
   float: left;
 }
 
-.navbar {
-  vertical-align:middle;
+.navigation {
   margin-left: auto;
-  margin-right: 10px;
+  margin-right: 20px;
 }
 
-li {
-    display: inline;
-    list-style: none;
-    margin: 0 20px 0 20px;
+.navigation ul {
+  list-style: none;
+}
+
+.navigation ul a {
+  color: #333;
+  line-height: 32px;
+  padding: 10px 15px;
+}
+
+.navigation ul li {
+  position: relative;
+  float: left;
+  margin: 0;
+  padding: 0
+}
+
+.navigation ul li:hover {
+  background: #f6f6f6;
+}
+
+.navigation ul ul {
+  display:none;
+  position:absolute;
+  top:100%;
+  left:0;
+  background:#fff;
+  padding:0
+}
+
+.navigation ul ul li {
+  width:125px
+}
+
+.navigation ul li:hover > ul {
+  display:block
 }
 
 /* SECTION */
@@ -58,6 +93,22 @@ li {
   font-family: 'Lato', sans-serif;
   letter-spacing: 5px;
   border-bottom: solid thin;
+}
+
+.about {
+  width: 800px;
+}
+
+.abouttext {
+  color: white;
+  font-family: 'Lato', sans-serif;
+  letter-spacing: 10px;
+  margin-bottom: 10px;
+}
+
+.about  p {
+  color: white;
+  font-family: 'Lato', sans-serif;
 }
 
 /* FOOTER */

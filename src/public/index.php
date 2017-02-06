@@ -30,5 +30,10 @@ $app->get('/', function ($request, $response, $args) {
     return $this->view->render($response, 'home.twig');
 });
 
+$app->get('/about', function ($request, $response, $args) {
+    
+    return $this->view->render($response, 'about.twig');
+});
+
 // Run app
 $app->run();
