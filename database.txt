@@ -1,0 +1,101 @@
+-- phpMyAdmin SQL Dump
+-- version 4.4.10
+-- http://www.phpmyadmin.net
+--
+-- Client :  localhost:3306
+-- Généré le :  Mar 07 Février 2017 à 03:52
+-- Version du serveur :  5.5.42
+-- Version de PHP :  7.0.0
+
+SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
+SET time_zone = "+00:00";
+
+--
+-- Base de données :  `downhill`
+--
+
+-- --------------------------------------------------------
+
+--
+-- Structure de la table `bikes`
+--
+
+CREATE TABLE `bikes` (
+  `id` int(11) NOT NULL,
+  `company_id` int(11) NOT NULL,
+  `model_name` varchar(255) NOT NULL,
+  `image` varchar(255) NOT NULL,
+  `price` int(11) NOT NULL,
+  `specs` text NOT NULL
+) ENGINE=InnoDB AUTO_INCREMENT=11 DEFAULT CHARSET=utf8;
+
+--
+-- Contenu de la table `bikes`
+--
+
+INSERT INTO `bikes` (`id`, `company_id`, `model_name`, `image`, `price`, `specs`) VALUES
+(1, 1, 'SUPREME PARK', 'https://s3.ca-central-1.amazonaws.com/downhill/bikes/Commencal+supreme+Park.jpg', 2499, '\r\nFRAME	\r\nNEW SUPREME PARK 650B alloy 7005 hydroformed \r\n\r\nSHOCK	\r\nROCKSHOX Kage R, 240x76, Spring: 300 lbs on S / 300 lbs on M / 350 lbs on L\r\n\r\nFORK	\r\nROCKSHOX BoXXer RC 200mm, 650b, Spring: Soft on S / Medium on M / Firm on L\r\n\r\nHEADSET	\r\nSemi integrated,tapered ZS44/56, 1’’1/8 lower washer, sealed bearings\r\n\r\nSTEM	\r\nSPANK Spike Direct mount 50mm, 31,8mm, Shiny Black Anodized, custom Purple artwork\r\n\r\nBAR	\r\nSPANK Spike, Super 6 Alloy, 800mm, 30mm rise, Shiny Black Anodized, custom Purple artwork, Ø31,8mm\r\n\r\nGRIPS	\r\nCOMMENCAL Lock On, Ø32mm, soft compound \r\n\r\nBRAKES	\r\nSRAM CODE R 4 pistons 200mm / 200mm\r\n\r\nSHIFTERS	\r\nSRAM X5 9 speed\r\n\r\nFRONT / REAR MECH	\r\nSRAM X7 9 speed Short Cage \r\n\r\nBOTTOM BRACKET	\r\nRIDE ALPHA PressFit 107mm\r\n\r\nCRANKSET / CHAIN GUIDE	\r\nRIDE ALPHA alloy 2 pieces, 36T, 165mm / E13 LG1\r\n\r\nCHAIN	\r\nYABAN S9, 9 speed\r\n\r\nCASSETTE	\r\nSRAM PG950 11-28 T\r\n\r\nRIMS	\r\nSPANK Spike Race 28, 28mm, 32H, 650b, Tubeless Ready Shiny Black Anodized, custom Purple artwork\r\n\r\nHUBS	\r\nRIDE ALPHA DH, 32H, 20mm Front, 150x12mm Rear, Sealed Bearings\r\n\r\nSPOKES	\r\nPillar Spokes 2.0mm (Nylock)\r\n\r\nTIRES	\r\nMAXXIS DHR II, 650b x 2,40 , 60 TPI, Super Tacky \r\n\r\nSEATPOST	\r\nRIDE ALPHA DH, Ø31,6mm, 300mm\r\n\r\nSADDLE	\r\nRIDE ALPHA SuperLight foam, CrMo rails. Purple \r\n\r\nPEDALS INCLUDED	\r\nYes'),
+(2, 1, 'SUPREME DH V4 WORLD CUP', 'https://s3.ca-central-1.amazonaws.com/downhill/bikes/Commencal+supreme+v4.jpg', 4999, 'FRAME	\r\nNEW SUPREME V4 650b alloy 6066 hydroformed 220mm travel\r\n\r\nSHOCK	\r\nROCKSHOX Vivid R2C, Spring: 350 lbs on M / 400 lbs on L \r\n\r\nFORK	\r\nROCKSHOX Boxxer World Cup, Spring: Air\r\n\r\nHEADSET	\r\nSemi integrated, IS41, 1 1/8" lower washer, sealed bearing\r\nSTEM	\r\nRENTHAL Integra, 50mm, ø31,8mm \r\n\r\nBAR	\r\nRENTHAL Fatbar, 780mm, 30mm rise, ø31,8mm\r\n\r\nGRIPS	\r\nRENTHAL Lock On Kevlar\r\n\r\nBRAKES	\r\nSRAM CODE 4 pistons 200mm / 200mm\r\n\r\nSHIFTERS	\r\nSRAM XODH 7 speed \r\n\r\nFRONT / REAR MECH	\r\nSRAM XO1 DH Type 2.1, 7 speed, Medium Cage\r\n\r\nBOTTOM BRACKET	\r\nSRAM XO\r\n\r\nCRANKSET / CHAIN GUIDE	\r\nE13 LG1 Race Carbon, DM 36T / E13 LG1+ Wide Angle\r\n\r\nCHAIN	\r\nKMC X11L, 11 speed\r\n\r\nCASSETTE	\r\nSRAM PG795 10-24\r\n\r\nRIMS	\r\nE13 LG1R+, 32H, TLR, 650B \r\n\r\nHUBS	\r\nE13 LG1R+, 32H\r\n\r\nSPOKES	\r\nE13 LG1R+\r\n\r\nTIRES	\r\nMAXXIS Minion DHR II, 650b x 2,40 , 60 TPI, 3C Maxx Grip\r\n\r\nSEATPOST	\r\nRIDE ALPHA DH, 31,6mm, 300mm\r\n\r\nSADDLE	\r\nNEW RIDE ALPHA Saddle Cr-Mo rails \r\n\r\nPEDALS INCLUDED	\r\nNo'),
+(3, 1, 'SUPREME DH V4.2 WORLD CUP', 'https://s3.ca-central-1.amazonaws.com/downhill/bikes/Commencal+Supreme+V42.jpg', 4499, 'FRAME	\r\n2017 SUPREME V4.2 650b alloy 6066 hydroformed 220mm travel\r\n\r\nSHOCK	\r\nROCKSHOX VIVID R2C 267X89, 250 LBS ON S, 300 LBS ON M, 350 LBS ON L, 400 LBS ON XL\r\n\r\nFORK	\r\nROCKSHOX BOXXER WORLD CUP 650b 200mm\r\n\r\nHEADSET	\r\nRIDE ALPHA, semi integrated, Commencal standard\r\n\r\nSTEM	\r\nRIDE ALPHA DH Direct Mount, 50mm, 31,8mm\r\n\r\nBARS	\r\nRIDE ALPHA, Alloy 7075, double butted, 30mm rise, 780mm, Ø31,8mm\r\n\r\nGRIPS	\r\nRIDE ALPHA, soft compound, single clamp\r\n\r\nBRAKES	\r\nSRAM CODE R 200mm/200mm\r\n\r\nSHIFTERS	\r\nSRAM GX DH 7sp\r\n\r\nFRONT / REAR MECH	\r\n– / SRAM X01 DH 7sp\r\n\r\nBOTTOM BRACKET	\r\nE13 Press fit BB 92\r\n\r\nCRANKSET / CHAIN GUIDE	\r\nE13 LG1, 34t / E13 LG1+ WideGuide\r\n\r\nCHAIN	\r\nSRAM PC 1130\r\n\r\nCASSETTE	\r\nSRAM GX DH 7sp 11-25\r\n\r\nRIMS	\r\nSPANK SPIKE RACE 33, 32 holes, tubeless ready, 28.5mm inner\r\n\r\nHUBS	\r\nFORMULA DH, 32 holes, sealed bearings\r\n\r\nSPOKES / NIPPLES	\r\nPILLAR Spokes, Stainless steel, 2mm Black, Brass Nipple 12mm Black Nylock\r\n\r\nTYRES	\r\nMAXXIS HRII 650x2,4 Super tacky front and MAXXIS DHRII 650x2,4 Super tacky rear\r\n\r\nSEATPOST	\r\nSDG I-BEAM Micro, 31,6mm, 300mm \r\n\r\nSADDLE	\r\nSDG I-FLY 2.0, Black/Black\r\n\r\nWEIGHT	\r\n16.79 kg\r\n\r\nACCESSORIES	Shock mudguard, down tube protector, seatstay protector, integrated bumpers\r\n\r\nPEDALS INCLUDED	\r\nNO'),
+(4, 2, 'SESSION 8', 'https://s3.ca-central-1.amazonaws.com/downhill/bikes/Trek+8.jpeg', 5299, 'Frameset\r\n\r\nFrameAlpha Platinum Aluminum, ABP, Full Floater, EVO Link, E2 tapered head tube, Mino Link, integrated frame protection, internal control routing, MicroTruss, down tube guard, ISCG Mount, 210mm travel\r\nFront suspensionRockShox BoXXer RC, coil spring (S, M red; L, XL blue), low speed compression, internal preload, Motion Control IS, 20mm Maxle DH, 200mm travel\r\nRear suspensionRockShox Kage RC, coil spring, rebound, adjustable hydraulic compression damping, (S 400lb; M 450lb; L 500lb; XL 500lb spring), tuned by Trek Suspension Lab, 8.75x2.75"\r\nWheels\r\n\r\nWheelsDT Swiss FR2150, 110x20 front, 157x12 rear\r\nTyresBontrager G4 Team Issue, 27.5x2.35"\r\nDrivetrain\r\n\r\nShiftersSRAM GX DH, 7 speed\r\nRear derailleurSRAM GX DH, Roller Bearing Clutch\r\nCrankTruvativ Descendant, 36T\r\nBottom bracketSealed cartridge\r\nCassetteSRAM PG-720, 11-25, 7 speed\r\nChainSRAM PC-1110\r\nComponents\r\n\r\nSaddleBontrager Evoke 2, chromoly rails\r\nSeatpostBontrager Rhythm Elite, 2-bolt head, 31.6mm, zero offset\r\nHandlebarBontrager Rhythm Elite, 31.8mm, 15mm rise\r\nGripsBontrager Rhythm, dual lock-on\r\nStemBontrager Direct Mount, 31.8mm\r\nHead setFSA Orbit, sealed cartridge bearing, 1-1/8" top, 1.5" bottom\r\nBrake setSRAM Guide R hydraulic disc\r\nWeight\r\n\r\nWeight17.5" - 17.42 kg / 38.40 lbs'),
+(5, 2, 'SESSION 88', 'https://s3.ca-central-1.amazonaws.com/downhill/bikes/Trek+88.jpeg', 6599, 'Frameset\r\n\r\nFrameAlpha Platinum Aluminum, ABP, Full Floater, EVO Link, E2 tapered head tube, Mino Link, integrated frame protection, internal control routing, MicroTruss, down tube guard, ISCG Mount, 210mm travel\r\nFront suspensionRockShox BoXXer RC, coil spring (S, M red; L, XL blue), low speed compression, internal preload, Motion Control IS, 20mm Maxle DH, 200mm travel\r\nRear suspensionFox Performance VAN, externally adjustable rebound and low-speed compression; (S 400lb; M 450lb; L 500lb; XL 500lb spring), tuned by Trek Suspension Lab, 8.75x2.75"\r\nWheels\r\n\r\nWheelsDT Swiss FR2150, 110x20 front, 157x12 rear\r\nTyresBontrager G4 Team Issue, 27.5x2.35"\r\nDrivetrain\r\n\r\nShiftersSRAM X0 DH, 7 speed\r\nRear derailleurSRAM X01, Roller Bearing Clutch\r\nCrankTruvativ Descendant, 36T\r\nBottom bracketSealed cartridge\r\nCassetteSRAM PG-720, 11-25, 7 speed\r\nChainSRAM PC-1110\r\nComponents\r\n\r\nSaddleBontrager Evoke 2, chromoly rails\r\nSeatpostBontrager Rhythm Elite, 2-bolt head, 31.6mm, zero offset\r\nHandlebarBontrager Line, 35mm, 27.5mm rise, 820mm width\r\nGripsBontrager Rhythm, dual lock-on\r\nStemRace Face Chester Direct Mount, 35mm\r\nHead setFSA Orbit, sealed cartridge bearing, 1-1/8" top, 1.5" bottom\r\nBrake setSRAM CODE R hydraulic disc\r\nWeight\r\n\r\nWeight17.5" - 17.19 kg / 37.90 lbs'),
+(6, 2, 'SESSION 9.9', '', 13299, 'https://s3.ca-central-1.amazonaws.com/downhill/bikes/Trek+99.jpeg'),
+(7, 3, 'TUES AL', 'https://s3.ca-central-1.amazonaws.com/downhill/bikes/YT+Tues+Al+2017.jpg', 2899, 'FRAME\r\nTUES ALUMINIUM 27,5" \r\n \r\nREAR DERAILLEUR\r\nSRAM GX DH \r\n \r\nWHEELSET\r\nE*THIRTEEN LG1 \r\n \r\nSHOCK\r\nROCKSHOX KAGE RC \r\n \r\nSHIFTER\r\nSRAM GX DH \r\n \r\nFRONT TIRE\r\nMAXXIS HIGH ROLLER II DH \r\n \r\nFORK\r\nROCKSHOX BOXXER RC \r\n \r\nCASSETTE\r\nE*THIRTEEN CASSETTE \r\n \r\nREAR TIRE\r\nMAXXIS HIGH ROLLER II DH \r\n \r\nTRAVEL FRONT/REAR\r\n200MM / 208MM\r\nCHAIN\r\nSRAM PC1130 \r\n \r\nSTEM\r\nRACE FACE CHESTER \r\n \r\nHEADSET\r\nACROS AZX-205 \r\n \r\nBRAKES\r\nSRAM GUIDE RS \r\n \r\nHANDLEBAR\r\nRACE FACE CHESTER \r\n \r\nCRANKSET\r\nRACE FACE CHESTER (34T) \r\n \r\nDISCS FRONT/REAR\r\nSRAM CENTERLINE 200MM / 200MM\r\nSEATPOST\r\nSDG I-BEAM \r\n \r\nBOTTOM BRACKET\r\nRACE FACE PRESSFIT 30 (83) \r\n \r\nGRIPS\r\nTHE SENSUS LITE\r\nSADDLE\r\nSDG IFLY \r\n \r\nCHAIN GUIDE\r\nE*THIRTEEN LG1+ (32-34) \r\n \r\nPEDALS\r\nWITHOUT / OHNE \r\n \r\nFRAME SIZE\r\nS / M / L \r\n \r\nWEIGHT\r\n17,4 KG / 38,4 LB\r\n'),
+(8, 3, 'TUES CF', 'https://s3.ca-central-1.amazonaws.com/downhill/bikes/YT+Tues+CF.jpg', 3999, 'FRAME\r\nTUES CARBON 27,5" \r\n \r\nREAR DERAILLEUR\r\nSRAM GX DH \r\n \r\nWHEELSET\r\nE*THIRTEEN LG1 \r\n \r\nSHOCK\r\nROCKSHOX VIVID R2C \r\n \r\nSHIFTER\r\nSRAM GX DH \r\n \r\nFRONT TIRE\r\nMAXXIS HIGH ROLLER II DH \r\n \r\nFORK\r\nROCKSHOX BOXXER TEAM \r\n \r\nCASSETTE\r\nE*THIRTEEN CASSETTE \r\n \r\nREAR TIRE\r\nMAXXIS HIGH ROLLER II DH \r\n \r\nTRAVEL FRONT/REAR\r\n200MM / 208MM\r\nCHAIN\r\nSRAM PC1130 \r\n \r\nSTEM\r\nRACE FACE ATLAS DM \r\n \r\nHEADSET\r\nACROS AIX-326 \r\n \r\nBRAKES\r\nSRAM GUIDE RS \r\n \r\nHANDLEBAR\r\nRACE FACE ATLAS (800) \r\n \r\nCRANKSET\r\nE*THIRTEEN LG1 \r\n \r\nDISCS FRONT/REAR\r\nSRAM CENTERLINE 200MM / 200MM\r\nSEATPOST\r\nSDG I-BEAM \r\n \r\nBOTTOM BRACKET\r\nE*THIRTEEN PRESSFIT 30 (83) \r\n \r\nGRIPS\r\nTHE SENSUS LITE\r\nSADDLE\r\nSDG IFLY \r\n \r\nCHAIN GUIDE\r\nE*THIRTEEN LG1+ (32-34) \r\n \r\nPEDALS\r\nWITHOUT / OHNE \r\n \r\nFRAME SIZE\r\nS / M / L / XL \r\n \r\nWEIGHT\r\n16,2 KG / 35,7 LB\r\n'),
+(9, 3, 'TUES CF PRO', 'https://s3.ca-central-1.amazonaws.com/downhill/bikes/YT+Tues+CF+Pro.jpg', 4499, 'FRAME\r\nTUES CARBON 27,5" \r\n \r\nREAR DERAILLEUR\r\nSRAM X01 DH \r\n \r\nWHEELSET\r\nE*THIRTEEN LG1+ \r\n \r\nSHOCK\r\nFOX FLOAT X2 PERFORMANCE ELITE \r\n \r\nSHIFTER\r\nSRAM X01 DH \r\n \r\nFRONT TIRE\r\nMAXXIS HIGH ROLLER II DH \r\n \r\nFORK\r\nFOX 40 PERFORMANCE ELITE \r\n \r\nCASSETTE\r\nE*THIRTEEN \r\n \r\nREAR TIRE\r\nMAXXIS HIGH ROLLER II DH \r\n \r\nTRAVEL FRONT/REAR\r\n203MM / 208MM\r\nCHAIN\r\nSRAM PC1130 \r\n \r\nSTEM\r\nRENTHAL INTEGRA 35 \r\n \r\nHEADSET\r\nACROS AIX-326 \r\n \r\nBRAKES\r\nSRAM GUIDE RSC \r\n \r\nHANDLEBAR\r\nRENTHAL FATBAR CARBON \r\n \r\nCRANKSET\r\nE*THIRTEEN LG1+ \r\n \r\nDISCS FRONT/REAR\r\nSRAM CENTERLINE 203MM / 200MM\r\nSEATPOST\r\nSDG I-BEAM \r\n \r\nBOTTOM BRACKET\r\nE*THIRTEEN PRESSFIT 30 (83) \r\n \r\nGRIPS\r\nTHE SENSUS LITE\r\nSADDLE\r\nSDG IFLY \r\n \r\nCHAIN GUIDE\r\nE*THIRTEEN LG1+ (32-34) \r\n \r\nPEDALS\r\nWITHOUT / OHNE \r\n \r\nFRAME SIZE\r\nS / M / L / XL \r\n \r\nWEIGHT\r\n15,9 KG / 35,1 LB'),
+(10, 3, 'TUES CF PRO RACE', 'https://s3.ca-central-1.amazonaws.com/downhill/bikes/YT+Tues+CF+Pro+Race.jpg', 5999, 'FRAME\r\nTUES CARBON 27,5" \r\n \r\nREAR DERAILLEUR\r\nSRAM X01 DH \r\n \r\nWHEELSET\r\nE*THIRTEEN LG1R \r\n \r\nSHOCK\r\nFOX FLOAT X2 FACTORY \r\n \r\nSHIFTER\r\nSRAM X01 DH \r\n \r\nFRONT TIRE\r\nMAXXIS HIGH ROLLER II DH \r\n \r\nFORK\r\nFOX 40 FLOAT FACTORY \r\n \r\nCASSETTE\r\nE*THIRTEEN CASSETTE \r\n \r\nREAR TIRE\r\nMAXXIS HIGH ROLLER II DH \r\n \r\nTRAVEL FRONT/REAR\r\n203MM / 208MM\r\nCHAIN\r\nSRAM PC1130 \r\n \r\nSTEM\r\nRENTHAL INTEGRA 35 \r\n \r\nHEADSET\r\nACROS AIX-326 \r\n \r\nBRAKES\r\nTRP QUADIEM G-SPEC \r\n \r\nHANDLEBAR\r\nRENTHAL FATBAR CARBON \r\n \r\nCRANKSET\r\nE*THIRTEEN LG1R \r\n \r\nDISCS FRONT/REAR\r\nTRP ROTOR 203MM / 203MM\r\nSEATPOST\r\nSDG I-BEAM \r\n \r\nBOTTOM BRACKET\r\nE*THIRTEEN PRESSFIT 30 (83) \r\n \r\nGRIPS\r\nODI ELITE MOTION\r\nSADDLE\r\nSDG IFLY \r\n \r\nCHAIN GUIDE\r\nE*THIRTEEN LG1+ (32-34) \r\n \r\nPEDALS\r\nWITHOUT / OHNE \r\n \r\nFRAME SIZE\r\nS / M / L / XL \r\n \r\nWEIGHT\r\n15,4 KG / 33,9 LB');
+
+-- --------------------------------------------------------
+
+--
+-- Structure de la table `company`
+--
+
+CREATE TABLE `company` (
+  `id` int(255) NOT NULL,
+  `name` varchar(255) NOT NULL,
+  `year` year(4) NOT NULL,
+  `logo` varchar(255) NOT NULL,
+  `description` varchar(255) DEFAULT NULL,
+  `website` varchar(255) NOT NULL
+) ENGINE=InnoDB AUTO_INCREMENT=4 DEFAULT CHARSET=utf8;
+
+--
+-- Contenu de la table `company`
+--
+
+INSERT INTO `company` (`id`, `name`, `year`, `logo`, `description`, `website`) VALUES
+(1, 'Commencal', 2000, 'https://s3.ca-central-1.amazonaws.com/downhill/company/commencal.png', NULL, 'http://www.commencal-store.com/'),
+(2, 'Trek', 1975, 'https://s3.ca-central-1.amazonaws.com/downhill/company/trek-logo1.png', NULL, 'http://www.trekbikes.com/'),
+(3, 'YT Industries', 2006, 'https://s3.ca-central-1.amazonaws.com/downhill/company/YT_CI_Logo_2015_05_TILEBAR_black_tranparent-2-1.jpg', NULL, 'https://ca.yt-industries.com/');
+
+--
+-- Index pour les tables exportées
+--
+
+--
+-- Index pour la table `bikes`
+--
+ALTER TABLE `bikes`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Index pour la table `company`
+--
+ALTER TABLE `company`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- AUTO_INCREMENT pour les tables exportées
+--
+
+--
+-- AUTO_INCREMENT pour la table `bikes`
+--
+ALTER TABLE `bikes`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=11;
+--
+-- AUTO_INCREMENT pour la table `company`
+--
+ALTER TABLE `company`
+  MODIFY `id` int(255) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=4;

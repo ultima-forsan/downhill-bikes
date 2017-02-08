@@ -24,7 +24,7 @@ $container['view'] = function ($container) {
 };
 
 $app->get('/', function ($request, $response, $args) {
-    
+    require '../lib/database.php';
     return $this->view->render($response, 'home.twig');
 });
 
